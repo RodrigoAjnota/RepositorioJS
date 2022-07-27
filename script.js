@@ -1,4 +1,5 @@
-let marca = prompt("Ingrese una marca").toLowerCase()
+//Primer Desafío
+/*let marca = prompt("Ingrese una marca").toLowerCase()
 let precio = parseFloat(prompt("Ingrese un precio"))
 
 if(marca === "audi" && (precio <= 20000 && precio >= 10000)){
@@ -9,11 +10,11 @@ if(marca === "audi" && (precio <= 20000 && precio >= 10000)){
     console.log("Se añadio a tu carrito el Nissan de $" + precio)
 }else{
     alert("No tenemos ese auto a ese precio, lo sentimos.")
-}
+}*/
 
 
-//Segundo Desafio, comentado para cuando termine de revisar el primero
-/*function elegir(nombre, edad, genero){
+//Segundo Desafio
+function elegir(nombre, edad, genero){
     console.log("El nombre de tu personaje es " + nombre)
     console.log("La edad de tu persoanje es " + edad)
     console.log("El genero de tu personaje es " + genero)
@@ -43,4 +44,4 @@ do{
     elegir(nombre, edad, genero)
     console.log("¡Personaje terminado!")
     seguir = prompt("Quieres continuar Y/N").toLowerCase()
-}while(seguir == "y")*/
+}while(seguir == "y")
