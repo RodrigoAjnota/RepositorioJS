@@ -10,11 +10,11 @@ if(marca === "audi" && (precio <= 20000 && precio >= 10000)){
     console.log("Se añadio a tu carrito el Nissan de $" + precio)
 }else{
     alert("No tenemos ese auto a ese precio, lo sentimos.")
-}*/
+}
 
 
 //Segundo Desafio
-/*function elegir(nombre, edad, genero){
+function elegir(nombre, edad, genero){
     console.log("El nombre de tu personaje es " + nombre)
     console.log("La edad de tu persoanje es " + edad)
     console.log("El genero de tu personaje es " + genero)
@@ -60,7 +60,8 @@ const jugador1 = new Jugador("pepito", 20, 18, "M")
 const jugador2 = new Jugador("maria", 15, 19, "F")
 const jugador3 = new Jugador("juan", 17, 16, "M")
 
-const jugadores = [jugador1, jugador2, jugador3]
+const jugadores = []
+jugadores.push(jugador1,jugador2,jugador3)
 
 let elegir, finalizar
 
@@ -82,4 +83,19 @@ do{
     }
 }while(finalizar == "n")
 
+//1er Entrega del Proyecto Final
+/*class Concesionario{
+    constructor(marca, km, precio, modelo){
+        this.marca = marca
+        this.km = km
+        this.precio = precio
+        this.modelo = modelo
+    }
+}
+
+const auto1 = new Concesionario ["toyota", 10, 23550, "corolla"]
+const auto2 = new Concesionario ["audi", 10, 21840, "a1"]
+const auto3 = new Concesionario ["nissan", 10, 23800, "juke"]
+const auto4 = new Concesionario ["bmw", 10, 44400, "serie 3"]
+const auto5 = new Concesionario ["ford", 10, 56731, "mustang"]*/
 
