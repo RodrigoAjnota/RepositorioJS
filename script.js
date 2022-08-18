@@ -32,6 +32,20 @@ const botonSigueinte = document.getElementById("boton")
             bloques("sofa")
         } else if(nivel == 4){
             bloques("mueble")
+            Swal.fire({
+                title: 'Quieres guardar tu progreso?',
+                showDenyButton: true,
+                showCancelButton: true,
+                confirmButtonText: 'Guardar',
+                denyButtonText: `No Guardar`,
+                }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    Swal.fire('Guardado!', '', 'success')
+                } else if (result.isDenied) {
+                    Swal.fire('No guardaste tu progreso', '', 'info')
+                }
+                })
         } else{
             console.log("No hace falta escribir más")
         }
@@ -54,6 +68,17 @@ function bloques(nombreDelObjeto) {
             console.log("Juego terminado")
         }
     }else{
-        console.log("Respuesta incorrecta")
+        Toastify({
+            text: "Respuesta equivocada",
+            duration: 2000,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)",
+            },
+        }).showToast();
     }
 }
